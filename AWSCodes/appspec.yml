@@ -1,18 +1,18 @@
 version: 0.0
 os: linux
 files:
-  - source: AWSCodes/index.html
+  - source: index.html
     destination: /var/www/html/
 hooks:
   BeforeInstall:
-    - location: AWSCodes/scripts/install_dependencies.sh
+    - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: AWSCodes/scripts/start_server.sh
+    - location: scripts/start_server.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: AWSCodes/scripts/stop_server.sh
+    - location: scripts/stop_server.sh
       timeout: 300
       runas: root
